@@ -1,21 +1,22 @@
 $font-stack: 'Gloria Hallelujah',
 cursive;
 
-html, body {
-    max-width: 100%;
-    max-height: 100%;
-    overflow-y: hidden;
+$fullSize: 100%;
+
+html,
+body {
+    max-width: $fullSize;
+    max-height: $fullSize;
     overflow-x: hidden;
 }
 
 body {
-    width: 100%;
-    height: 100%;
+    width: $fullSize;
+    height: $fullSize;
     background: #74ebd5;
     /* fallback for old browsers */
     background: linear-gradient(to right, #ACB6E5, #74ebd5);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
     font-family: $font-stack;
 }
 
@@ -26,30 +27,105 @@ body {
 }
 
 .itemContainer {
-    margin: 10px 0 10px 220px;
+    margin: 10px 0 10px 190px;
     border: solid #fff 5px;
     border-style: outset;
     background-color: transparent;
-    width: 85%;
+    width: 75%;
+    cursor: pointer;
+    border-radius: 20px;
+    outline: none;
+}
+
+.itemContainer:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.itemContainer:active {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.50), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transform: translateY(4px);
 }
 
 .item {
     font-size: 25px;
+    font-family: $font-stack;
     margin: 5px 0 5px 15px;
 }
 
 .btn {
-    margin: 25px;
-    font-family: $font-stack;
+    background-color: transparent;
+    line-height: 70px;
+    width: 160px;
+    height: 70px;
+    margin: 25px 25px 25px 0;
     font-size: 35px;
-    display: flex;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    outline: none;
+}
+
+.btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.btn:active {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.50), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transform: translateY(4px);
 }
 
 #sideNav {
-    height: 100%;
+    height: $fullSize;
     width: 250px;
     position: absolute;
     top: 0;
     left: 0;
     padding-top: 60px;
+    text-align: center;
+}
+
+.infoNav {
+    height: $fullSize;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(125, 208, 233);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+    text-align: center;
+
+    h3 h4 {
+        color: white;
+        display: inline-block;
+    }
+}
+
+.infoNav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.infoNav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .infoNav {
+        padding-top: 15px;
+    }
+
+    .infoNav a {
+        font-size: 18px;
+    }
 }

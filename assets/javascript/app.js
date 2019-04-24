@@ -136,10 +136,11 @@ $(document).ready(function () {
     $(".dessert").fadeIn(1000);
     $(".dairy").fadeIn(1000);
   });
+
   // Function call for the typewriter.
   setTimeout(function () {
     typingTitle();
-  }, 100);
+  }, 100); // Runs 0.1s after the document is "ready".
 
   // When the document is loaded and ready, display the items from the JSON.
   centerData();

@@ -1,5 +1,4 @@
-html,
-body {
+html body {
   max-width: 100%;
   max-height: 100%;
   overflow-x: hidden;
@@ -23,13 +22,12 @@ body {
 
 .itemContainer {
   margin: 10px 0 10px 190px;
-  border: solid #fff 5px;
-  border-style: outset;
+  border: none;
   background-color: transparent;
   width: 75%;
   cursor: pointer;
-  border-radius: 20px;
   outline: none;
+  border-radius: 10px;
 }
 
 .itemContainer:hover {
@@ -52,6 +50,7 @@ body {
 
 .btn {
   background-color: transparent;
+  font-family: "Concert One", cursive;
   line-height: 70px;
   width: 160px;
   height: 70px;
@@ -76,6 +75,10 @@ body {
           transform: translateY(4px);
 }
 
+.active {
+  color: white;
+}
+
 #sideNav {
   height: 100%;
   width: 250px;
@@ -88,15 +91,15 @@ body {
 
 .infoNav {
   height: 100%;
-  width: 0;
+  width: 270px;
   position: fixed;
   top: 0;
-  right: 0;
-  background-color: #7dd0e9;
+  right: -290px;
+  background-color: rgba(125, 208, 233, 0.5);
   overflow-x: hidden;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  padding-top: 20px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  padding: 20px 10px 0 10px;
   text-align: center;
 }
 
@@ -111,16 +114,15 @@ body {
   font-size: 25px;
   color: #818181;
   display: block;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
-.infoNav .closebtn {
+.closebtn {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 36px;
-  margin-left: 50px;
 }
 
 @media screen and (max-height: 450px) {

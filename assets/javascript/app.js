@@ -9,6 +9,7 @@ let $itemType = $(".itemType");
 let $itemBrand = $(".itemBrand");
 let $itemQuantity = $(".itemQuantity");
 let $svg = $(".svg");
+let $itemInfoHeader = $(".itemInfoHeader");
 
 // A typing effect created by individually showing each letter by looping through at a certain speed.
 function typingTitle() {
@@ -16,7 +17,7 @@ function typingTitle() {
   if (i < title.length) {
     document.getElementById("title").innerHTML += title.charAt(i);
     i++;
-    setTimeout(typingTitle, 50);
+    setTimeout(typingTitle, 70);
   }
 }
 
@@ -41,14 +42,14 @@ function centerData() {
 
 // Function to close the right-navbar and clear the information for a new button
 function closeNav() {
-  $infoNav[0].style.width = "0";
+  $infoNav[0].style.right = "-290px";
   flag = false;
   $(".itemContainer").attr("onclick", "openNav(this)");
 }
 
 // Function to open the right-navbar and append relevant information
 function openNav(response) {
-  $infoNav[0].style.width = "270px";
+  $infoNav[0].style.right = "-0px";
 
   console.log(this);
   // Clearing the text is good practice, however, because the text is dynamically
@@ -60,7 +61,7 @@ function openNav(response) {
   $itemQuantity.html("");
 
   flag = true;
-
+  $itemInfoHeader.html("Item Information");
   $svg
     .attr("src", `./assets/resources/${data[response.getAttribute("data-pos")].category}.svg`)
     .attr("alt", `${data[response.getAttribute("data-pos")].category}`);
@@ -70,6 +71,14 @@ function openNav(response) {
   $itemBrand.html("Item Brand: " + data[response.getAttribute("data-pos")].brand)
   $itemQuantity.html("Quantity: " + data[response.getAttribute("data-pos")].qty)
 }
+
+// Sets the "active" class to the clicked button.
+// Reset isn't given the "active" class because it's only purpose is to bring all options back.
+$("button").on("click", function () {
+  $("button").siblings().removeClass("active");
+  $(this).addClass("active");
+  $("#btnReset").removeClass("active");
+})
 
 $(document).ready(function () {
   // Anonymous functions called when filter buttons are clicked, to display the corresponding options
@@ -128,7 +137,7 @@ $(document).ready(function () {
   // Function call for the typewriter.
   setTimeout(function () {
     typingTitle();
-  }, 10);
+  }, 100);
 
   centerData();
 });

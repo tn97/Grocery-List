@@ -1,10 +1,10 @@
-$font-stack: 'Gloria Hallelujah',
+$fontGloria: 'Gloria Hallelujah',
 cursive;
-
+$fontConcert: 'Concert One',
+cursive;
 $fullSize: 100%;
 
-html,
-body {
+html body {
     max-width: $fullSize;
     max-height: $fullSize;
     overflow-x: hidden;
@@ -17,43 +17,42 @@ body {
     /* fallback for old browsers */
     background: linear-gradient(to right, #ACB6E5, #74ebd5);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    font-family: $font-stack;
+    font-family: $fontGloria;
 }
 
 #title {
     font-size: 4em;
     text-align: center;
-    //help
 }
 
 .itemContainer {
     margin: 10px 0 10px 190px;
-    border: solid #fff 5px;
-    border-style: outset;
+    border: none;
     background-color: transparent;
     width: 75%;
     cursor: pointer;
-    border-radius: 20px;
     outline: none;
+    border-radius: 10px;
 }
 
 .itemContainer:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .itemContainer:active {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.50), 0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.50), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     transform: translateY(4px);
 }
 
 .item {
     font-size: 25px;
-    font-family: $font-stack;
+    font-family: $fontGloria;
     margin: 5px 0 5px 15px;
 }
 
 .btn {
     background-color: transparent;
+    font-family: $fontConcert;
     line-height: 70px;
     width: 160px;
     height: 70px;
@@ -67,12 +66,16 @@ body {
 }
 
 .btn:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn:active {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.50), 0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.50), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     transform: translateY(4px);
+}
+
+.active {
+    color: white;
 }
 
 #sideNav {
@@ -87,14 +90,14 @@ body {
 
 .infoNav {
     height: $fullSize;
-    width: 0;
+    width: 270px;
     position: fixed;
     top: 0;
-    right: 0;
-    background-color: rgb(125, 208, 233);
+    right: -290px;
+    background-color: rgba(125, 208, 233, 0.5);
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 20px;
+    transition: 0.7s;
+    padding: 20px 10px 0 10px;
     text-align: center;
 
     h3 h4 {
@@ -109,15 +112,14 @@ body {
     font-size: 25px;
     color: #818181;
     display: block;
-    transition: 0.3s;
+    transition: 0.7s;
 }
 
-.infoNav .closebtn {
+.closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
-    margin-left: 50px;
 }
 
 @media screen and (max-height: 450px) {

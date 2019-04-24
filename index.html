@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Groceries List</title>
 </head>
+
 <body>
-  <h1 id="title">Groceries List</h1>
+  <div id="sideNav">
+    <button class="btn" id="btnFruit">Fruit</button>
+    <button class="btn" id="btnPasta">Pasta</button>
+    <button class="btn" id="btnBeverage">Beverage</button>
+    <button class="btn" id="btnDessert">Dessert</button>
+    <button class="btn" id="btnDairy">Dairy</button>
+  </div>
+
+  <!-- Holds the "Groceries List" title -->
+  <h1 id="title"></h1>
+
+  <!-- Holds all the components for the groceries,
+  they are appended on through JS -->
+  <div class="content"></div>
 
   <!-- importing jQuery -->
   <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
@@ -17,4 +33,5 @@
   <!-- main JavaScript file -->
   <script type="text/javascript" src="./assets/javascript/app.js"></script>
 </body>
+
 </html>

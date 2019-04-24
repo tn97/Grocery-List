@@ -1,14 +1,55 @@
-body {
-  width: 100%;
-  height: 100%;
-  background: #C6FFDD;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+$font-stack: 'Gloria Hallelujah',
+cursive;
+
+html, body {
+    max-width: 100%;
+    max-height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
-.hi {
-  background-color: pink;
+body {
+    width: 100%;
+    height: 100%;
+    background: #74ebd5;
+    /* fallback for old browsers */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: $font-stack;
+}
+
+#title {
+    font-size: 4em;
+    text-align: center;
+    //help
+}
+
+.itemContainer {
+    margin: 10px 0 10px 220px;
+    border: solid #fff 5px;
+    border-style: outset;
+    background-color: transparent;
+    width: 85%;
+}
+
+.item {
+    font-size: 25px;
+    margin: 5px 0 5px 15px;
+}
+
+.btn {
+    margin: 25px;
+    font-family: $font-stack;
+    font-size: 35px;
+    display: flex;
+}
+
+#sideNav {
+    height: 100%;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
 }

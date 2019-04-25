@@ -3,6 +3,7 @@ cursive;
 $fontConcert: 'Concert One',
 cursive;
 $fullSize: 100%;
+$fontColor: blanchedalmond;
 
 html body {
     max-width: $fullSize;
@@ -10,29 +11,36 @@ html body {
     overflow-x: hidden;
 }
 
+.content {
+    margin: 10px 0 10px 300px;
+    border: none;
+    border-radius: 20px;
+    width: 60%;
+    background: rgba(153, 148, 148, 0.4)
+}
+
 body {
     width: $fullSize;
     height: $fullSize;
-    background: #74ebd5;
-    /* fallback for old browsers */
-    background: linear-gradient(to right, #ACB6E5, #74ebd5);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #3b3b3b;
     font-family: $fontGloria;
 }
 
 #title {
     font-size: 4em;
     text-align: center;
+    color: $fontColor;
 }
 
 .itemContainer {
-    margin: 10px 0 10px 190px;
+    margin: 15px auto;
     border: none;
     background-color: transparent;
-    width: 70%;
     cursor: pointer;
     outline: none;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .itemContainer:hover {
@@ -48,6 +56,7 @@ body {
     font-size: 25px;
     font-family: $fontGloria;
     margin: 5px 0 5px 15px;
+    color: $fontColor;
 }
 
 .btn {
@@ -63,6 +72,7 @@ body {
     cursor: pointer;
     border-radius: 20px;
     outline: none;
+    color: $fontColor;
 }
 
 .btn:hover {
@@ -75,17 +85,21 @@ body {
 }
 
 .active {
-    color: white;
+    color: rgb(58, 58, 58);
 }
 
 #sideNav {
-    height: $fullSize;
+    border: none;
+    background: rgba(153, 148, 148, 0.4);
+    border-radius: 20px;
+    height: 80%;
     width: 250px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     padding-top: 60px;
     text-align: center;
+    color: $fontColor;
 }
 
 .infoNav {
@@ -94,14 +108,15 @@ body {
     position: fixed;
     top: 0;
     right: -290px;
-    background-color: rgba(125, 208, 233, 0.5);
+    background-color: rgba(153, 148, 148, 0.4);
     overflow-x: hidden;
     transition: 0.7s;
     padding: 20px 10px 0 10px;
     text-align: center;
+    color: $fontColor;
 
     h3 h4 {
-        color: white;
+        color: $fontColor;
         display: inline-block;
     }
 }

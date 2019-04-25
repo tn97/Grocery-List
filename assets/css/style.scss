@@ -3,7 +3,8 @@ cursive;
 $fontConcert: 'Concert One',
 cursive;
 $fullSize: 100%;
-$fontColor: blanchedalmond;
+$fontColor: rgb(226, 208, 208);
+$containerBG: rgba(153, 148, 148, 0.5);
 
 html body {
     max-width: $fullSize;
@@ -12,17 +13,17 @@ html body {
 }
 
 .content {
-    margin: 10px 0 10px 300px;
+    margin: 10px 0 10px 370px;
     border: none;
     border-radius: 20px;
     width: 60%;
-    background: rgba(153, 148, 148, 0.4)
+    background: $containerBG;
 }
 
 body {
     width: $fullSize;
     height: $fullSize;
-    background: #3b3b3b;
+    background: #64739b;
     font-family: $fontGloria;
 }
 
@@ -85,12 +86,12 @@ body {
 }
 
 .active {
-    color: rgb(58, 58, 58);
+    color: rgb(196, 196, 196);
 }
 
 #sideNav {
     border: none;
-    background: rgba(153, 148, 148, 0.4);
+    background: $containerBG;
     border-radius: 20px;
     height: 80%;
     width: 250px;
@@ -108,7 +109,7 @@ body {
     position: fixed;
     top: 0;
     right: -290px;
-    background-color: rgba(153, 148, 148, 0.4);
+    background-color: $containerBG;
     overflow-x: hidden;
     transition: 0.7s;
     padding: 20px 10px 0 10px;
@@ -122,10 +123,9 @@ body {
 }
 
 .infoNav a {
-    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    font-size: 50px;
+    color: white;
     display: block;
     transition: 0.7s;
 }

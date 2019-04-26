@@ -2,9 +2,11 @@ $fontGloria: 'Gloria Hallelujah',
 cursive;
 $fontConcert: 'Concert One',
 cursive;
+$height: 90%;
 $fullSize: 100%;
 $fontColor: rgb(226, 208, 208);
 $containerBG: rgba(153, 148, 148, 0.5);
+$borderRadius: 20px;
 
 html body {
     max-width: $fullSize;
@@ -15,7 +17,7 @@ html body {
 .content {
     margin: 10px 0 10px 370px;
     border: none;
-    border-radius: 20px;
+    border-radius: $borderRadius;
     width: 60%;
     background: $containerBG;
 }
@@ -71,7 +73,7 @@ body {
     display: inline-block;
     border: none;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: $borderRadius;
     outline: none;
     color: $fontColor;
 }
@@ -92,8 +94,8 @@ body {
 #sideNav {
     border: none;
     background: $containerBG;
-    border-radius: 20px;
-    height: 80%;
+    border-radius: $borderRadius;
+    height: $height;
     width: 250px;
     position: fixed;
     top: 0;
@@ -104,7 +106,7 @@ body {
 }
 
 .infoNav {
-    height: $fullSize;
+    height: $height;
     width: 270px;
     position: fixed;
     top: 0;
@@ -115,6 +117,7 @@ body {
     padding: 20px 10px 0 10px;
     text-align: center;
     color: $fontColor;
+    border-radius: $borderRadius;
 
     h3 h4 {
         color: $fontColor;
@@ -130,11 +133,71 @@ body {
     transition: 0.7s;
 }
 
-.closebtn {
+.closeBtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
+}
+
+@media screen and (max-width: 1280px) {
+    #sideNav {
+        width: 168px;
+    }
+
+    .btn, .content {
+        font-size: 23px;
+        margin: 15px 15px 15px 0;
+    }
+
+    #title {
+        font-size: 3em;
+    }
+
+    .content {
+        margin-left: 230px;
+    }
+
+    .infoNav {
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #sideNav {
+        width: 125px;
+        padding: 0;
+    }
+
+    .btn, .content {
+        font-size: 18px;
+    }
+
+    .btn {
+        width: 80px; 
+    }
+
+    .content {
+        margin-left: 140px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #title {
+        margin: 0;
+    }
+
+    #sideNav {
+        flex-direction: row;
+    }
+
+    .infoNav {
+        width: 125px;
+    }
+
+    .content {
+        margin-left: 130px;
+    }
 }
 
 @media screen and (max-height: 450px) {

@@ -40,9 +40,9 @@ function centerData() {
     $itemContainer.appendTo($content) // Appending the individual containers to the parent container.
   };
 }
+
 // For the open/close functions below, I actually ran into an issue where, $(".infoNav") was returning as undefined. Since document.getElementByClassName usually returns a set of elements with the same classnames, I tried being more specific by giving it the index of [0].
 // That seemed to fix the problem of the DOM not being able to find the className of "infoNav" 
-
 // Function to slide away the right-navbar
 function closeNav() {
   $infoNav[0].style.right = "-290px";

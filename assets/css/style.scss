@@ -200,6 +200,46 @@ body {
     }
 }
 
+@media screen and (max-width: 480px) {
+  
+  body {
+    margin: 0;
+  }
+  
+  #title {
+    display: none;
+    margin: 0;
+  }
+
+  #sideNav {
+    display: none;
+    margin: 0;
+  }
+
+  .content {
+    height: $fullSize;
+    width: $fullSize;
+    margin: 0;
+  }
+
+  .infoNav {
+    font-size: 2em;
+    right: -480px;
+    padding: 0;
+    height: $fullSize;
+    width: $fullSize;
+    background-color: #E2D0D0;
+    color: rgb(153, 148, 148);
+  }
+
+  .svg {
+    width: 50%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 @media screen and (max-height: 450px) {
     .infoNav {
         padding-top: 15px;

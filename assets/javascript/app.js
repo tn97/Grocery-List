@@ -45,14 +45,24 @@ function centerData() {
 // That seemed to fix the problem of the DOM not being able to find the className of "infoNav" 
 // Function to slide away the right-navbar
 function closeNav() {
-  $infoNav[0].style.right = "-290px";
+
+  if ($(window).width() <= 480) {
+    $infoNav[0].style.right = `-${$(window).width()}px`
+    //Add your javascript for screens wider than or equal to 768 here
+  }
+  else {
+    $infoNav[0].style.right = "-290px";
+    //Add your javascript for screens smaller than 768 here
+  }
+
   flag = false; // Flag that is used to check the status of the right-navbar
   $(".itemContainer").attr("onclick", "openNav(this)"); // On the event of a click, the data for that element will be passed through "this" into the function, which is set up below as (response);
 }
 
 // Function to slide the right-navbar and append relevant information
 function openNav(response) {
-  $infoNav[0].style.right = "0px";
+  var pixels = `${$(window).width()}` - `${$(window).width()}`;
+  $infoNav[0].style.right = `${pixels}px`;
 
   // Clearing the text is good practice, however, because the text is dynamically
   // changed, this doesn't serve that much a purpose in this case.
@@ -145,3 +155,12 @@ $(document).ready(function () {
   // When the document is loaded and ready, display the items from the JSON.
   centerData();
 });
+
+
+// var targetWidth = 768;
+//  if ( $(window).width() &gt;= targetWidth) {     
+//   //Add your javascript for screens wider than or equal to 768 here
+//  }
+//  else {
+//   //Add your javascript for screens smaller than 768 here
+// } 

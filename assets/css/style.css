@@ -196,6 +196,40 @@ body {
   }
 }
 
+@media screen and (max-width: 480px) {
+  body {
+    margin: 0;
+  }
+  #title {
+    display: none;
+    margin: 0;
+  }
+  #sideNav {
+    display: none;
+    margin: 0;
+  }
+  .content {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .infoNav {
+    font-size: 2em;
+    right: -480px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #E2D0D0;
+    color: #999494;
+  }
+  .svg {
+    width: 50%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 @media screen and (max-height: 450px) {
   .infoNav {
     padding-top: 15px;

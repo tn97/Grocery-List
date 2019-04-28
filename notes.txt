@@ -1,0 +1,17 @@
+While creating this application, I had to think of several things:
+
+I tried my best not to have the JSON information on the same .js file due to cluttering issues. So what I did was put it in it's own .js file and stored the entire object in a variable. That way I was able to call the variable and access information when needed.
+
+With the use of jQuery and vanilla JS I was able to create a dynamic codebase that will render new information as it is entered into the JSON object, given that they do still have the same properties.
+
+I thought about adding in the ability to pass in information and at the same time delete information but I felt it unnecessary as the project would then become a "To Do" list rather than a Grocery List with the static data provided.
+
+One big issue that I faced was how the background and overall style of the webpage was going to look. It seemed very simple but I actually had to think for a very long time about how the colors contrasted with each other and as a spectator, if it was easy to look at. The colors that were chosen to represent the webpage were picked after several swappings, some were each too dull, too contrasting, or too saturated, causing the eyes to hurt.
+
+I used the SCSS as a preprocessor, which was automatically converted into a css file by a "Live Sass to CSS" conversion add-on in VSCode.
+
+My process in coding this application was first to create the functionality and then worry about styling afterwards.
+
+I drew out multiple plans on how I wanted the webpage to display so that while creating the javascript, I had an idea in mind about what I would need to work and in what ways. One example is the way that the information navbar slides in and out from the sides. I wanted some form of way to keep the user/client from closing the page out of monotony of a static webpage. A sliding navbar is always intriguing to the eye.
+
+Then as I created the project, I realized that if there was a lot of information displaying on the webpage (as in, if the JSON got longer), there would be a ton of content in the center div. So thinking about user-accessability, I added in a filter on the left-side navbar in order to display that data according to what "genre" was chosen.

@@ -129,7 +129,7 @@ body {
 
 .infoNav a {
   text-decoration: none;
-  font-size: 50px;
+  font-size: 30px;
   color: white;
   display: block;
   -webkit-transition: 0.7s;
@@ -140,14 +140,14 @@ body {
   position: absolute;
   top: 0;
   right: 25px;
-  font-size: 36px;
 }
 
 @media screen and (max-width: 1280px) {
   #sideNav {
     width: 168px;
   }
-  .btn, .content {
+  .btn,
+  .content {
     font-size: 23px;
     margin: 15px 15px 15px 0;
   }
@@ -167,7 +167,8 @@ body {
     width: 125px;
     padding: 0;
   }
-  .btn, .content {
+  .btn,
+  .content {
     font-size: 18px;
   }
   .btn {
@@ -221,6 +222,9 @@ body {
     width: 100%;
     background-color: #E2D0D0;
     color: #999494;
+  }
+  .infoNav a {
+    font-size: 2em;
   }
   .svg {
     width: 50%;

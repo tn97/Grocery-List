@@ -46,13 +46,12 @@ function centerData() {
 // Function to slide away the right-navbar
 function closeNav() {
 
+  // In order to style a computer screen, it's easy because no matter what the size, there is plenty of room. However on a mobile screen, because the size is so limited, I had to hard-code in a specific styling for $infoNav if a width of 480px or below is detected
   if ($(window).width() <= 480) {
     $infoNav[0].style.right = `-${$(window).width()}px`
-    //Add your javascript for screens wider than or equal to 768 here
   }
   else {
     $infoNav[0].style.right = "-290px";
-    //Add your javascript for screens smaller than 768 here
   }
 
   flag = false; // Flag that is used to check the status of the right-navbar
@@ -61,16 +60,10 @@ function closeNav() {
 
 // Function to slide the right-navbar and append relevant information
 function openNav(response) {
+  // Saving the value of 0 through finding the screens width and minusing it from itself, for mobile responsive purposes.
   var pixels = `${$(window).width()}` - `${$(window).width()}`;
+  // This is used to hide the information navbar on the right side
   $infoNav[0].style.right = `${pixels}px`;
-
-  // Clearing the text is good practice, however, because the text is dynamically
-  // changed, this doesn't serve that much a purpose in this case.
-  // $category.html("");
-  // $itemName.html("");
-  // $itemType.html("");
-  // $itemBrand.html("");
-  // $itemQuantity.html("");
 
   flag = true; // Flag that is used to check the status of the right-navbar
   $itemInfoHeader.html("Item Information"); // A header in order to give context as to what the navbar does.
@@ -155,12 +148,3 @@ $(document).ready(function () {
   // When the document is loaded and ready, display the items from the JSON.
   centerData();
 });
-
-
-// var targetWidth = 768;
-//  if ( $(window).width() &gt;= targetWidth) {     
-//   //Add your javascript for screens wider than or equal to 768 here
-//  }
-//  else {
-//   //Add your javascript for screens smaller than 768 here
-// } 

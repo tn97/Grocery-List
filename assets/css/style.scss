@@ -9,203 +9,203 @@ $containerBG: rgba(153, 148, 148, 0.5);
 $borderRadius: 20px;
 
 html body {
-    max-width: $fullSize;
-    max-height: $fullSize;
-    overflow-x: hidden;
+  max-width: $fullSize;
+  max-height: $fullSize;
+  overflow-x: hidden;
 }
 
 .content {
-    margin: 10px 0 10px 370px;
-    border: none;
-    border-radius: $borderRadius;
-    width: 60%;
-    background: $containerBG;
+  margin: 10px 0 10px 370px;
+  border: none;
+  border-radius: $borderRadius;
+  width: 60%;
+  background: $containerBG;
 }
 
 body {
-    width: $fullSize;
-    height: $fullSize;
-    background: #64739b;
-    font-family: $fontGloria;
+  width: $fullSize;
+  height: $fullSize;
+  background: #64739b;
+  font-family: $fontGloria;
 }
 
 #title {
-    font-size: 4em;
-    text-align: center;
-    color: $fontColor;
+  font-size: 4em;
+  text-align: center;
+  color: $fontColor;
 }
 
 .itemContainer {
-    margin: 15px auto;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    outline: none;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
+  margin: 15px auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .itemContainer:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .itemContainer:active {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.50), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    transform: translateY(4px);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.50), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  transform: translateY(4px);
 }
 
 .item {
-    font-size: 25px;
-    font-family: $fontGloria;
-    margin: 5px 0 5px 15px;
-    color: $fontColor;
+  font-size: 25px;
+  font-family: $fontGloria;
+  margin: 5px 0 5px 15px;
+  color: $fontColor;
 }
 
 .btn {
-    background-color: transparent;
-    font-family: $fontConcert;
-    line-height: 70px;
-    width: 160px;
-    height: 70px;
-    margin: 25px 25px 25px 0;
-    font-size: 35px;
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-    border-radius: $borderRadius;
-    outline: none;
-    color: $fontColor;
+  background-color: transparent;
+  font-family: $fontConcert;
+  line-height: 70px;
+  width: 160px;
+  height: 70px;
+  margin: 25px 25px 25px 0;
+  font-size: 35px;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  border-radius: $borderRadius;
+  outline: none;
+  color: $fontColor;
 }
 
 .btn:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn:active {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.50), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    transform: translateY(4px);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.50), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  transform: translateY(4px);
 }
 
 .active {
-    color: rgb(126, 108, 143);
+  color: rgb(126, 108, 143);
 }
 
 #sideNav {
-    border: none;
-    background: $containerBG;
-    border-radius: $borderRadius;
-    height: $height;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 60px;
-    text-align: center;
-    color: $fontColor;
+  border: none;
+  background: $containerBG;
+  border-radius: $borderRadius;
+  height: $height;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 60px;
+  text-align: center;
+  color: $fontColor;
 }
 
 .infoNav {
-    height: $height;
-    width: 270px;
-    position: fixed;
-    top: 0;
-    right: -290px;
-    background-color: $containerBG;
-    overflow-x: hidden;
-    transition: 0.7s;
-    padding: 20px 10px 0 10px;
-    text-align: center;
-    color: $fontColor;
-    border-radius: $borderRadius;
+  height: $height;
+  width: 270px;
+  position: fixed;
+  top: 0;
+  right: -290px;
+  background-color: $containerBG;
+  overflow-x: hidden;
+  transition: 0.7s;
+  padding: 20px 10px 0 10px;
+  text-align: center;
+  color: $fontColor;
+  border-radius: $borderRadius;
 
-    h3 h4 {
-        color: $fontColor;
-        display: inline-block;
-    }
+  h3 h4 {
+    color: $fontColor;
+    display: inline-block;
+  }
 }
 
 .infoNav a {
-    text-decoration: none;
-    font-size: 50px;
-    color: white;
-    display: block;
-    transition: 0.7s;
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  display: block;
+  transition: 0.7s;
 }
 
 .closeBtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
+  position: absolute;
+  top: 0;
+  right: 25px;
 }
 
 @media screen and (max-width: 1280px) {
-    #sideNav {
-        width: 168px;
-    }
+  #sideNav {
+    width: 168px;
+  }
 
-    .btn, .content {
-        font-size: 23px;
-        margin: 15px 15px 15px 0;
-    }
+  .btn,
+  .content {
+    font-size: 23px;
+    margin: 15px 15px 15px 0;
+  }
 
-    #title {
-        font-size: 3em;
-    }
+  #title {
+    font-size: 3em;
+  }
 
-    .content {
-        margin-left: 230px;
-    }
+  .content {
+    margin-left: 230px;
+  }
 
-    .infoNav {
-        width: 180px;
-    }
+  .infoNav {
+    width: 180px;
+  }
 }
 
 @media screen and (max-width: 960px) {
-    #sideNav {
-        width: 125px;
-        padding: 0;
-    }
+  #sideNav {
+    width: 125px;
+    padding: 0;
+  }
 
-    .btn, .content {
-        font-size: 18px;
-    }
+  .btn,
+  .content {
+    font-size: 18px;
+  }
 
-    .btn {
-        width: 80px; 
-    }
+  .btn {
+    width: 80px;
+  }
 
-    .content {
-        margin-left: 140px;
-    }
+  .content {
+    margin-left: 140px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    #title {
-        margin: 0;
-    }
+  #title {
+    margin: 0;
+  }
 
-    #sideNav {
-        flex-direction: row;
-    }
+  #sideNav {
+    flex-direction: row;
+  }
 
-    .infoNav {
-        width: 125px;
-    }
+  .infoNav {
+    width: 125px;
+  }
 
-    .content {
-        margin-left: 130px;
-    }
+  .content {
+    margin-left: 130px;
+  }
 }
 
 @media screen and (max-width: 480px) {
-  
   body {
     margin: 0;
   }
-  
+
   #title {
     display: none;
     margin: 0;
@@ -232,6 +232,10 @@ body {
     color: rgb(153, 148, 148);
   }
 
+  .infoNav a{
+    font-size: 2em;
+  }
+
   .svg {
     width: 50%;
     height: 50%;
@@ -241,11 +245,11 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-    .infoNav {
-        padding-top: 15px;
-    }
+  .infoNav {
+    padding-top: 15px;
+  }
 
-    .infoNav a {
-        font-size: 18px;
-    }
+  .infoNav a {
+    font-size: 18px;
+  }
 }
